@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">TuanTran Survey Form</h1>
+            <p id="description" class="description text-center">
+                Thank you for taking the time to help us improve the platform
+            </p>
+        </header>
+
+        <form id="survey-form" method="POST" action="/submit">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input id="name" type="text" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your Email" required>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+                <input type="number" id="number" name="age" class="form-control" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <p>What is the relationship between you and TuanTran?</p> 
+                <select id="dropdown" name="relationship" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="friend">Friend</option>
+                    <option value="best-friend">Best friend</option>
+                    <option value="acquaintance">Acquaintance</option>
+                    <option value="lover">Lover</option>
+                    <option value="family">Family member</option>
+                    <option value="stranger">Stranger</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Do you find TuanTran very handsome and humourous?</p>
+                <label>
+                    <input type="radio" name="feeling" class="input-radio" value="definitely" checked>Definitely
+                </label>
+                <label>
+                    <input type="radio" name="feeling" class="input-radio" value="sure" checked>Sure
+                </label>
+                <label>
+                    <input type="radio" name="feeling" class="input-radio" value="Absolutely" checked>Absolutely
+                </label>
+            </div>
+            <div class="form-group">
+                <p>What is your favorite characteristics of TuanTran?</p>
+                <select id="dropdown" name="characteristics" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="humourous">Humourous</option>
+                    <option value="intelligent">Intelligent</option>
+                    <option value="mad">Mad</option>
+                    <option value="friendly">Friendly</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>What would you like to see TuanTran's major? <span class="clue">(Check all that apply)</span></p>
+                <label>
+                    <input type="checkbox" name="prefer" value="front-end-projects" class="input-checkbox">Front-end Projects
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="back-end-projects" class="input-checkbox">Back-end Projects
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="data-visualization" class="input-checkbox">Data Visualization
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="challenges" class="input-checkbox">Challenges
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="open-source-community" class="input-checkbox">Open Source Community
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="help-desk" class="input-checkbox">IT help-desk
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="youtuber" class="input-checkbox">Youtuber
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="city-meetups" class="input-checkbox">City Meetups
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="wiki" class="input-checkbox">Wiki
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="forum" class="input-checkbox">Forum
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" value="additional-courses" class="input-checkbox">Additional Courses
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>What do you say to Tuan through this application</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here...">
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button" spellcheck="false">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="success_submit" id="success_submit">
+        <h2>!!Successfully sent us universal message</h2>
+        <p> Hope you go to my Facebook page to chat with me :luv </p>
+        <button type="submit" id="continuee" class="submit-button">Ok</button>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <script src="console.js"></script>
+</body>
+</html>
